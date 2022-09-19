@@ -1,7 +1,7 @@
-package docker_test
+package go_rest_api_server
 
 import "fmt"
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("Start ...")
 }
