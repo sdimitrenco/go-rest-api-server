@@ -24,4 +24,4 @@ tasks:
   swagger.doc:
     desc: Doc for swagger
     cmds:
-      - docker run -i yousan/swagger-yaml-to-html < pkg/swagger/
+      - docker run -i yousan/swagger-yaml-to-html < pkg/swagger/swagger.yml > doc/index.html
