@@ -42,6 +42,11 @@ func Health(params operations.CheckHealthParams) middleware.Responder {
 	return operations.NewCheckHealthOK().WithPayload("OK")
 }
 
+//GetHelloUser returns Hello + your name
+func GetHelloUser(user operations.GetHelloUserParams) middleware.Responder {
+	return operations.NewGetHelloUserOK().WithPayload("Hello" + user.User + "!")
+}
+
 //GetGopherByName returns a gopher in png
 func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder {
 	var URL string
@@ -59,5 +64,4 @@ func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder
 	}
 
 	return operations.NewGetGopherNameOK().WithPayload(response.Body)
-
 }
